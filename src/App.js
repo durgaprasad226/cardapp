@@ -7,6 +7,7 @@ import {
   Container,
   Row,
   Col,
+  Button,
 } from "reactstrap";
 const shirts = [
   {
@@ -162,12 +163,23 @@ function App() {
           {shirts.map((ajio) => {
             return (
               <Col className="col-4">
-                <Card className="my-4 mx-2">
-                  <img src={ajio.ImagePath} alt={ajio.ImagePath} />
+                <Card className="my-2 mx-2">
+                  <img
+                    height={400}
+                    width={400}
+                    src={ajio.ImagePath}
+                    alt={ajio.ImagePath}
+                  />
                   <CardBody className="text-en center-text">
-                    <CardTitle tag="h6">{ajio.Brand}</CardTitle>
-                    <CardTitle tag="h4">{ajio.Model}</CardTitle>
+                    <CardTitle style={{ color: "green" }} tag="h6">
+                      {ajio.Brand}
+                    </CardTitle>
+                    <CardTitle style={{ fontFamily: "unset" }} tag="h5">
+                      {ajio.Model}
+                    </CardTitle>
                     <CardText>{ajio.Price}</CardText>
+                    <Button color="success">BUY</Button>
+                    <Button color="primary">Add to Cart</Button>
                   </CardBody>
                 </Card>
               </Col>
