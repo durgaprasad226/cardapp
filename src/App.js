@@ -160,9 +160,9 @@ function App() {
     <div>
       <Container>
         <Row>
-          {shirts.map((ajio) => {
+          {shirts.map((ajio, index) => {
             return (
-              <Col className="col-4">
+              <Col key={index} className="col-4">
                 <Card className="my-2 mx-2">
                   <img
                     height={400}
